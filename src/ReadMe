@@ -1,3 +1,4 @@
+REQUIREMENTS:
 pip install pymysql
 pip install pyzipcode
 pip install Flask
@@ -9,14 +10,17 @@ pip install sqlalchemy
 pip install MySQLdb
 pip install http://cdn.mysql.com/Downloads/Connector-Python/mysql-connector-python-2.0.4.zip
 
+SETUP FLASKAPP:
 set FLASK_APP=Main.py
 
+RUN FLASK APP:
 python -m flask run
 
+LOCATION IN BROWSER:
 http://127.0.0.1:5000/
 
 
-
+PATHS:
 set path=C:\Users\snick\AppData\Local\Programs\Python\Python37
 
 E:
