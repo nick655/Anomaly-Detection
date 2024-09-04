@@ -1,0 +1,27 @@
+pip install pymysql
+pip install pyzipcode
+pip install Flask
+pip install pygal
+pip install numpy
+pip install pandas
+pip install sklearn
+pip install sqlalchemy
+pip install MySQLdb
+pip install http://cdn.mysql.com/Downloads/Connector-Python/mysql-connector-python-2.0.4.zip
+
+set FLASK_APP=Main.py
+
+python -m flask run
+
+http://127.0.0.1:5000/
+
+
+
+set path=C:\Users\snick\AppData\Local\Programs\Python\Python37
+
+E:
+
+cd E:\Project\AnomalyDetection\src
+
+
+

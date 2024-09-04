@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head profile="http://gmpg.org/xfn/11">
+        <title>Anomaly Detection</title>        
+        <link rel="stylesheet" href="/static/styles/layout.css" type="text/css" />  
+        <script src="/static/scripts/Chart.min.js" type="text/javascript"></script>
+    </head>
+    <body id="top">
+        <div class="wrapper row1">
+            <div id="header" class="clear">
+                <div class="fl_left">
+                    <h1><a href="{{ url_for('index') }}">Anomaly Detection from KDD CUP 99 Dataset Using Machine Learning Techniques</a></h1>
+                    <p>
+                        <span style="padding-left: 800px; color: red;"> Welcome : {{sessionValue}}</span>                           
+                    </p>
+                </div>
+                <div class="fl_right">
+                    <!--      <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">A - Z Index</a></li>
+                            <li class="last"><a href="#">Admin Login</a></li>
+                            <li class="last"><a href="#">Staff Login</a></li>
+                          </ul>
+                          <form action="#" method="post" id="sitesearch">
+                            <fieldset>
+                              <strong>Search:</strong>
+                              <input type="text" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+                              <input type="image" src="images/search.gif" id="search" alt="Search" />
+                            </fieldset>
+                          </form>-->
+                </div>
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper row2">
+            <div class="rnd">
+                <!-- ###### -->
+                <div id="topnav">
+                    <ul>
+                        <li><a href="{{ url_for('userprofile') }}">View Profile</a></li>
+                        <li><a href="{{ url_for('uploaddata') }}">Upload Data</a></li>
+                        <li><a href="{{ url_for('viewuploadeddata') }}">View Uploaded Data</a></li>
+                        <li><a href="{{ url_for('searchknn') }}">Search Via KNN</a></li> 
+                        <li><a href="{{ url_for('searchkmeans') }}">Search Via K-Means</a></li> 
+                        <li class="active"><a href="{{ url_for('graph') }}">Graph</a></li>
+                        <li><a href="{{ url_for('comparisongraph') }}">Comparison Graph</a></li>
+                        <li class="last"><a href="{{ url_for('signout') }}">Sign Out</a></li>
+                    </ul>
+                </div>
+                <!-- ###### -->
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper row3">
+            
+            <div class="rnd">
+                
+                <div id="container" class="clear">
+                    
+                    <!-- ####################################################################################################### -->
+                                   
+                   <div class="container" align="left">
+                        <embed type="image/svg+xml" src={{graph_data|safe}} style='max-width:1000px'/>
+                  </div>
+                   
+                </div>
+                  
+                    {% for message in get_flashed_messages() %}
+      
+                        <font color = 'red'>
+
+                            {{message}}
+
+                        </font>
+
+                    {% endfor %}
+                    
+                    <!-- ####################################################################################################### -->
+                </div>
+            
+            </div>
+        
+        <!-- ####################################################################################################### 
+        <div class="wrapper row4">
+          <div class="rnd">
+            <div id="footer" class="clear">
+               ####################################################################################################### 
+              <div class="fl_left clear">
+                <div class="fl_left center"><img src="images/demo/worldmap.gif" alt="" />
+                  <a href="#">Find Us With Google Maps &raquo;</a></div>
+                <address>
+                Address Line 1
+                Address Line 2
+                Town/City
+                Postcode/Zip
+                
+                Tel: xxxx xxxx xxxxxx
+                Email: <a href="#">contact@domain.com</a>
+                </address>
+              </div>
+              <div class="fl_right">
+                <div id="social" class="clear">
+                  <p>Stay Up to Date With Whats Happening</p>
+                  <ul>
+                    <li><a style="background-position:0 0;" href="#">Twitter</a></li>
+                    <li><a style="background-position:-72px 0;" href="#">LinkedIn</a></li>
+                    <li><a style="background-position:-142px 0;" href="#">Facebook</a></li>
+                    <li><a style="background-position:-212px 0;" href="#">Flickr</a></li>
+                    <li><a style="background-position:-282px 0;" href="#">RSS</a></li>
+                  </ul>
+                </div>
+                <div id="newsletter">
+                  <form action="#" method="post">
+                    <fieldset>
+                      <legend>Subscribe To Our Newsletter:</legend>
+                      <input type="text" value="Enter Email Here&hellip;" onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+                      <input type="text" id="subscribe" value="Submit" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+               ####################################################################################################### 
+            </div>
+          </div>
+        </div>
+         ####################################################################################################### 
+        <div class="wrapper">
+          <div id="copyright" class="clear">
+            <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+          </div>
+        </div>-->
+    </body>
+</html>
